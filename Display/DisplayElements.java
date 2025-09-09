@@ -9,5 +9,6 @@ package Display;
  * @author Estudiantes
  */
 public interface DisplayElements {
-    
+    void display();
 }
+
