@@ -3,9 +3,13 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package Subject;
+
 import weatherstation.observer.Observer;
 
-public class Subject {
-    
+public interface Subject {
+    void registerObserver(Observer o);
+    void removeObserver(Observer o);
+    void notifyObservers();
 }
+
 
