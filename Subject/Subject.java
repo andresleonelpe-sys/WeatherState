@@ -3,11 +3,9 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package Subject;
+import weatherstation.observer.Observer;
 
-/**
- *
- * @author Estudiantes
- */
 public class Subject {
     
 }
+
