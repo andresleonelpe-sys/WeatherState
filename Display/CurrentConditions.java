@@ -4,17 +4,25 @@
  */
 package Display;
 
-/**
- *
- * @author Estudiantes
- */
-public class CurrentConditions {
+import weatherstation.observer.Observer;
+import weatherstation.observer.Subject;
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        // TODO code application logic here
+public class CurrentConditions implements Observer, DisplayElement {
+    private float temperature;
+    private float humidity;
+    private Subject weatherData;
+
+    public CurrentConditions(Subject weatherData){
+        this.weatherData = weatherData;
+        weatherData.registerObserver(this);
     }
-    
+public void update(float temp, float humidity, float pressure) {
+    this.temperature = temp;
+    this.humidity = humidity;
+    display();
 }
+    public void display() {
+        System.out.println("Condiciones actuales:" + temperature + " °C y " + humidity + " % de humedad");
+    }
+}
+
